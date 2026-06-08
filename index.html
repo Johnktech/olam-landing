@@ -265,7 +265,7 @@
   .hero-bottle {
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%, calc(-50% + 21px));
+    transform: translate(-50%, -50%);
     z-index: 3;
     opacity: 0;
     animation: fadeUp 1.2s 0.8s forwards;
@@ -308,7 +308,7 @@
   .ingredients {
     padding: 140px 60px;
     position: relative;
-    background: #faf8f3;
+    background: var(--forest);
   }
   .ingredients::before {
     content: '';
@@ -387,7 +387,7 @@
 
   /* FIX 6: Social proof strip */
   .social-proof {
-    background: #f0ebe0;
+    background: #1a2e1f;
     padding: 70px 60px;
     text-align: center;
     position: relative;
@@ -434,7 +434,7 @@
   /* PRODUCTS */
   .products {
     padding: 140px 60px 100px;
-    background: #faf8f3;
+    background: var(--deep);
     position: relative;
   }
 
@@ -563,7 +563,7 @@
   /* STORY */
   .story {
     padding: 160px 60px;
-    background: #f5f0e8;
+    background: var(--forest);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
@@ -630,7 +630,7 @@
   /* RITUAL */
   .ritual {
     padding: 140px 60px;
-    background: #faf8f3;
+    background: var(--deep);
     text-align: center;
   }
   .ritual-steps {
@@ -638,10 +638,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     margin-top: 80px;
-    background: rgba(201,168,76,0.2);
+    background: rgba(201,168,76,0.08);
   }
   .ritual-step {
-    background: #faf8f3;
+    background: var(--deep);
     padding: 60px 30px;
   }
   .step-num {
@@ -664,10 +664,10 @@
     color: var(--muted);
   }
 
-  /* FIX 7: CTA BANNER — light ivory */
+  /* FIX 7: CTA BANNER — dark, not gold */
   .cta-banner {
     padding: 140px 60px;
-    background: #ede8df;
+    background: #0f1a12;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -678,7 +678,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 22rem;
     font-weight: 300;
-    color: rgba(201,168,76,0.10);
+    color: rgba(201,168,76,0.04); /* FIX 7 */
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 0.3em;
@@ -686,7 +686,7 @@
     white-space: nowrap;
   }
   .cta-inner {
-    border: 1px solid rgba(201,168,76,0.5);
+    border: 1px solid rgba(201,168,76,0.3);
     padding: 80px;
     display: inline-block;
     position: relative;
@@ -805,35 +805,6 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── Light section text overrides ── */
-  .ingredients .section-title,
-  .products .section-title,
-  .story .section-title,
-  .ritual .section-title { color: #1a2010; }
-
-  .ingredient-name { color: #1a2010; }
-  .ingredient-num { color: rgba(201,168,76,0.22); }
-  .ingredient-desc { color: #5a5854; }
-
-  .proof-headline { color: #1a2010; }
-  .proof-badge { color: #5a5854; }
-
-  .product-name { color: #1a2010; }
-  .product-sub { color: #6a6862; }
-  .product-notes { color: #6a6862; }
-
-  .story-quote { color: #1a2010; }
-  .story-text p { color: #5a5854; }
-  .story-text strong { color: #1a2010; }
-  .stat-label { color: #5a5854; }
-
-  .step-title { color: #1a2010; }
-  .step-desc { color: #6a6862; }
-  .step-num { color: rgba(201,168,76,0.28); }
-
-  .cta-banner h2 { color: #1a2010; }
-  .cta-banner p { color: #6a6862; }
-
   /* Responsive */
   @media (max-width: 900px) {
     /* FIX 1: Nav stays on top, doesn't overlap content */
@@ -884,7 +855,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, calc(-50% + 13px)) scale(0.6);
+      transform: translate(-50%, -50%) scale(0.6);
       transform-origin: center center;
     }
 
