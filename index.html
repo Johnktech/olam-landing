@@ -265,7 +265,7 @@
   .hero-bottle {
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 21px));
     z-index: 3;
     opacity: 0;
     animation: fadeUp 1.2s 0.8s forwards;
@@ -855,7 +855,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0.6);
+      transform: translate(-50%, calc(-50% + 13px)) scale(0.6);
       transform-origin: center center;
     }
 
